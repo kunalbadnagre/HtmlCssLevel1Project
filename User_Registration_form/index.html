@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url();
+            background-color: rgb(72, 144, 227);
+        }
+        #form{
+            border-radius: 20px;
+            width: 60%;
+            height: 90%;
+            background-color: rgb(186, 142, 211);
+            box-shadow: 0px 0px 100px red;
+            margin-left: 250px;
+        }
+        #legend{
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 100px;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #fieldset{
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .inputbox{
+            border-radius: 5px;
+        }
+        .inputbox:hover{
+            background-color: rgb(250, 219, 250);
+        }
+        #submit{
+            border-radius: 5px;
+            border: 2px solid black;
+            font-weight: normal;
+            width: 250px;
+            height: 25px;
+            transition: 0.3s;
+        }
+        #submit:hover{
+            width: 300px;
+            height: 30px;
+            border-radius: 100px;
+            color: blue;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form method="post" id="form">
+        <fieldset id="fieldset">
+            <legend id="legend">Admission registration Form</legend>
+        <div>
+            <label for="First Name">First Name: </label>
+            <input type="text" name="firstname" class="inputbox" placeholder="Kunal" required>
+            <label for="Last Name">Last Name: </label>
+            <input type="text" name="lastname" class="inputbox" placeholder="Badnagre" required>
+        </div>
+        <br>
+        <div>
+            <label for="Email">Email: </label>
+            <input type="email" name="email" class="inputbox" placeholder="abcd@gmail.com" required>
+        </div>
+        <br>
+        <div>
+            <label for="Password">Password: </label>
+            <input type="password" placeholder="kuna!#@$%$123" name="password" class="inputbox" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        </div>
+        <br>
+        <div>
+            <label for="gender">What is your gender?</label>
+            <input type="radio" name="gender" id=""><label for="male">Male</label>
+            <input type="radio" name="gender" id=""><label for="female">Female</label>
+            <input type="radio" name="gender" id=""><label for="other">Other</label>
+        </div>
+        <br>
+        <div>
+            <label for="about">Tell us About Yourself!</label>
+            <textarea placeholder="Type something" name="about" class="inputbox" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="courses">What courses you are interested in?</label>
+            <select name="" class="inputbox" multiple="multiple">
+                <option value="Fullstack Web Development">Fullstack Web Development</option>
+                <option value="Frontend Developer">Frontend Developer</option>
+                <option value="Backend Developer">Backend Developer</option>
+                <option value="Automation Testing">Automation Testing</option>
+                <option value="Cloud Services">Cloud Services</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="language">What is your favorite Language?</label>
+            <select name="language" class="inputbox">
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="HTML and CSS">HTML and CSS</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Swift">Swift</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" id="submit">Submit Your Details</button>
+    </fieldset>
+    </form>
+</div>
+</body>
+</html>
